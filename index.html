@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexAgent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="topBar">
+        <div class="logo">⚡ NexAgent</div>
+    </div>
+
+    <p class="subtitle">AI-powered text summarizer</p>
+
+    <textarea id="inputText" placeholder="Paste your text here..."></textarea>
+
+    <button id="summarizeBtn">Generate Summary</button>
+
+    <div id="loadingDots" style="display:none; margin-top:12px;">
+        Processing<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+    </div>
+
+    <div id="outputText">
+        Your AI summary will appear here...
+    </div>
+
+    <button id="copyBtn">Copy Result</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

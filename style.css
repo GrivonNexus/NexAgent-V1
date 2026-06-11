@@ -1,0 +1,208 @@
+/* =========================
+   BASE (SAFE BODY - NO BREAKS)
+========================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #000000);
+  color: white;
+  padding: 0;
+}
+
+/* =========================
+   MAIN WRAPPER
+========================= */
+.container {
+  width: 90%;
+  max-width: 650px;
+  margin: 80px auto;
+  background: rgba(20, 20, 20, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.65);
+  padding: 26px;
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   TITLE STYLE (if you have heading)
+========================= */
+h1, h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.4px;
+}
+
+/* =========================
+   INPUT BOX (TEXTAREA)
+========================= */
+textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 14px;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: 0.25s ease;
+}
+
+textarea:focus {
+  border: 1px solid #4f9cff;
+  box-shadow: 0 0 18px rgba(79, 156, 255, 0.35);
+  transform: scale(1.01);
+}
+
+/* =========================
+   BUTTON (PREMIUM AI STYLE)
+========================= */
+button {
+  width: 100%;
+  margin-top: 14px;
+  background: linear-gradient(135deg, #4f9cff, #6f7cff);
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(79, 156, 255, 0.35);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================
+   OUTPUT BOX (AI RESPONSE AREA)
+========================= */
+#outputText {
+  margin-top: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 4px solid #4f9cff;
+  padding: 16px;
+  border-radius: 14px;
+  min-height: 60px;
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: opacity 0.3s ease;
+  overflow-wrap: break-word;
+}
+
+/* =========================
+   LOADING STATE (optional)
+========================= */
+.loading {
+  opacity: 0.7;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* =========================
+   SMALL RESPONSIVE FIX
+========================= */
+@media (max-width: 600px) {
+  .container {
+    margin: 40px auto;
+    padding: 18px;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+}
+#loadingDots {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.dot {
+  animation: blink 1.4s infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+#copyBtn {
+  width: 100%;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+#copyBtn:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-1px);
+}
+
+#copyBtn:hover {
+  background: rgba(255,255,255,0.12);
+}
+.topBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+
+  background: linear-gradient(135deg, #4f9cff, #6f7cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtitle {
+  text-align: center;
+  color: #9aa4b2;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
